@@ -11,4 +11,3 @@ Y(Y==Inf) = 10000;
 f = a0 + a1 .* x;
 [r, ~, ~] = bestFit(a0, a1, X, Y);
 end
-
