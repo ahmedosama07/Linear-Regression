@@ -4,6 +4,10 @@ function [f, r] = expModel(y, x)
 %   method
 Y = log(y);
 X = x;
+X(X==-Inf) = -10000;
+X(X==Inf) = 10000;
+Y(Y==-Inf) = -10000;
+Y(Y==Inf) = 10000;
 [a0, a1] = leastSquare(Y, X);
 a = exp(a0);
 b = a1;
