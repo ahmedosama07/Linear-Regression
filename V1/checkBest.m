@@ -20,7 +20,7 @@ function [f,r]=checkBest(x,y)
             plot(x,y,'x',x,f,'-');
             title('Growth Rate Model')
         else
-            f=f_Linear;
+            f=f_linear;
             figure(1);
             plot(x,y,'x',x,f,'-');
             title('Linear Model')
