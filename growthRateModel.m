@@ -6,6 +6,6 @@ X = 1 ./ x;
 [a0, a1] = leastSquare(Y, X);
 a = 1 ./ a0;
 b = a1 .* a;
-f = (a .* x) / (b + x);
-[r, ~, ~] = bestFit(a0, a1, x, y);
+f = (a .* x) ./ (b + x);
+[r, ~, ~] = bestFit(a0, a1, X, Y);
 end
