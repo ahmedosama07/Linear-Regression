@@ -1,0 +1,21 @@
+x = [1 2 3 4 5]';
+y = [1.5 4.3 10.9 23.4 45.1]';
+model = input('Enter the model: \n 1.Linear model\n 2.Exponential Model\n 3.Power Model\n 4.Growth Model\n 5.Auto\n ');
+switch model
+    case 1
+        [f,r_linear,r2_linear]=linearModel(x,y);
+    case 2
+       [f,r_exp,r2_exp]=expModel(x,y);
+    case 3
+        [f,r_power,r2_power]=powerModel(x,y);
+    case 4
+        [f,r_growthRate,r2_growth]=powerModel(x,y);
+    case 5
+        [f,r]=checkBest(x,y);
+        
+end
+
+
+
+
+
