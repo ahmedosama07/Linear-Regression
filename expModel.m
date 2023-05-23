@@ -1,4 +1,4 @@
-function f = expModel(y, x)
+function [f, r] = expModel(y, x)
 %expModel Summary of this function goes here
 %   function calculates constants for exponent model in least squares
 %   method
@@ -8,4 +8,5 @@ X = x;
 a = exp(a0);
 b = a1;
 f = a .* exp(b .* x);
+[r, ~, ~] = bestFit(a0, a1, x, y);
 end
