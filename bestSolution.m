@@ -1,6 +1,6 @@
 function model = bestSolution(rLin, rExp, rPow, rGr)
-%UNTITLED5 Summary of this function goes here
-%   Detailed explanation goes here
+%bestSolution Summary of this function goes here
+%   function finds best solution for linear regression
 r = max([rLin, rExp, rPow, rGr]);
 
 switch r
