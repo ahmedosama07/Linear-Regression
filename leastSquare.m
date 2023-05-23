@@ -18,7 +18,5 @@ end
 A = [n sigmaX; sigmaX sigmaX2];
 B = [sigmaY; sigmaXY];
 
-s = linsolve(A, B);
-[a0, a1] = struct('x', num2cell(s)).x;
+[a0, a1] = struct('x', num2cell(linsolve(A, B))).x;
 end
-
