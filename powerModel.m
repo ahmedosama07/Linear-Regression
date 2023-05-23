@@ -7,5 +7,5 @@ X = log10(x);
 a = 10 .^ a0;
 b = a1;
 f = a .* (x .^ b);
-[r, ~, ~] = bestFit(a0, a1, x, y);
+[r, ~, ~] = bestFit(a0, a1, X, Y);
 end
