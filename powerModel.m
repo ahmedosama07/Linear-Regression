@@ -1,4 +1,4 @@
-function f = powerModel(y, x)
+function [f, r] = powerModel(y, x)
 %powerModel Summary of this function goes here
 %   function calculates constants for power model in least squares method
 Y = log10(y);
@@ -7,4 +7,5 @@ X = log10(x);
 a = 10 .^ a0;
 b = a1;
 f = a .* (x .^ b);
+[r, ~, ~] = bestFit(a0, a1, x, y);
 end
