@@ -5,6 +5,6 @@ X = x;
 Y = y;
 [a0, a1] = leastSquare(Y, X);
 f = a0 + a1 .* x;
-[r, ~, ~] = bestFit(a0, a1, x, y);
+[r, ~, ~] = bestFit(a0, a1, X, Y);
 end
 
