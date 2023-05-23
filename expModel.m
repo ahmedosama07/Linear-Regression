@@ -8,5 +8,5 @@ X = x;
 a = exp(a0);
 b = a1;
 f = a .* exp(b .* x);
-[r, ~, ~] = bestFit(a0, a1, x, y);
+[r, ~, ~] = bestFit(a0, a1, X, Y);
 end
