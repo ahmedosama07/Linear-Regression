@@ -11,5 +11,7 @@ Y(Y==Inf) = 10000;
 a = 10 .^ a0;
 b = a1;
 f = a .* (x .^ b);
+f(f==Inf) = 10000;
+f(f==Inf) = 10000;
 [r, ~, ~] = bestFit(a0, a1, X, Y);
 end
