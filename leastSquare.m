@@ -1,6 +1,6 @@
 function [a0, a1] = leastSquare(y, x)
 %leastSquare Summary of this function goes here
-%   Detailed explanation goes here
+%   function calculates constants for least squares method
 n = length(x);
 
 sigmaX = 0;
