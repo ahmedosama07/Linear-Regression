@@ -4,17 +4,18 @@ function [r, sr, st] = bestFit(a0, a1, x, y)
 sr = 0;
 st = 0;
 sigmaY = 0;
-for i = 1 : length(x)
+n = length(x);
+for i = 1 : length(y)
     sigmaY = sigmaY + y(i);
 end
 
-yMean = sigma_y./n;
+yMean = sigmaY ./ n;
 
-for i = 1 : length(x)
-    sr = sr + (y(i) -a0- a1 .* x(i)).^2;
-    st = st + (y(i) - yMean).^2;
+for i = 1 : length(y)
+    sr = sr + (y(i) - a0 - a1 * x(i)) .^ 2;
+    st = st + (y(i) - yMean) .^ 2;
 end
 
-r2=1-sr./st;
-r=sqrt(r2);
+r2 = (st - sr) ./ st;
+r = sqrt(r2);
 end
